@@ -1,0 +1,1 @@
+Deploy to Heroku: https://dashboard.heroku.com/apps/daily-time-tracker/deploy/heroku-git
