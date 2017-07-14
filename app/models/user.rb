@@ -3,7 +3,7 @@
 # Table name: users
 #
 #  id              :integer          not null, primary key
-#  email           :string           not null
+#  username        :string           not null
 #  password_digest :string           not null
 #  session_token   :string           not null
 #  created_at      :datetime         not null
@@ -13,14 +13,14 @@
 class User < ActiveRecord::Base
   attr_reader :password
 
-  validates :email, :password_digest, :session_token, presence: true
-  validates :email, uniqueness: true
+  validates :username, :password_digest, :session_token, presence: true
+  validates :username, uniqueness: true
   validates :password, length: { minimum: 2, allow_nil: true } # , message: "TOO SHORT"
 
   after_initialize :ensure_session_token
 
-  def self.find_by_credentials(email, password)
-    user = User.find_by(email: email)
+  def self.find_by_credentials(username, password)
+    user = User.find_by(username: username)
     return nil unless user && user.is_password?(password)
     user
   end
