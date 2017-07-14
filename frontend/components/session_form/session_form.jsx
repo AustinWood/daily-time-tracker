@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 class SessionForm extends React.Component {
   constructor(props) {
@@ -42,23 +43,22 @@ class SessionForm extends React.Component {
   authFooter() {
     let text;
     let link;
-    // if (this.props.formType === "login") {
-    //   text = "No account yet?";
-    //   link = (
-    //     <Link to="/signup" className="session-form-footer-link">
-    //       Sign up here!
-    //     </Link>
-    //   );
-    // } else {
-    //   text = "Already signed up?";
-    //   link = (
-    //     <Link to="/login" className="session-form-footer-link">
-    //       Log in here!
-    //     </Link>
-    //   );
-    // }
-    text = "text text"
-    link = "link text"
+    link = "yo"
+    if (this.props.formType === "login") {
+      text = "No account yet?";
+      link = (
+        <Link to="/signup" className="session-form-footer-link">
+          Sign up here!
+        </Link>
+      );
+    } else {
+      text = "Already signed up?";
+      link = (
+        <Link to="/login" className="session-form-footer-link">
+          Log in here!
+        </Link>
+      );
+    }
     return(
       <div className="session-form-footer-container">
         <p className="session-form-footer-text">
