@@ -12,6 +12,10 @@
     "start": "webpack-dev-server --inline",
     "postinstall": "webpack"
   },
+  "engines": {
+    "node": "7.8.0",
+    "npm": "4.2.0"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/AustinWood/daily-time-tracker.git"
