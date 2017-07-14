@@ -1,15 +1,12 @@
 #############
 ### Now
 
-create account
-log in
-log out
+seed data
+view all logs for current user
 
 #############
 ### Next
 
-seed data
-view all logs for current user
 edit logs for today
 add logs to today
 
