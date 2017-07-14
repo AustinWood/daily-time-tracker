@@ -6,20 +6,14 @@ class App extends React.Component {
   }
 
   componentWillMount() {
-    console.log("App will mount");
     this.ensureLoggedIn()
   }
 
-  componentDidMount() {
-    console.log("App mounted");
-  }
-
   ensureLoggedIn() {
-    console.log("_ensureLoggedIn (empty)");
-    // const currentUser = this.props.currentUser;
-    // if (!currentUser) {
-    //   replace('/login');
-    // }
+    const currentUser = this.props.currentUser;
+    if (!currentUser) {
+      this.props.history.push('/login');
+    }
   };
 
   render() {
