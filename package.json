@@ -7,7 +7,10 @@
     "test": "test"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "webpack": "webpack --watch",
+    "start": "webpack-dev-server --inline",
+    "postinstall": "webpack"
   },
   "repository": {
     "type": "git",
@@ -31,6 +34,7 @@
     "react-redux": "^5.0.5",
     "react-router": "^4.1.1",
     "redux": "^3.7.2",
+    "redux-thunk": "^2.2.0",
     "webpack": "^3.2.0",
     "webpack-dev-server": "^2.5.1"
   }
