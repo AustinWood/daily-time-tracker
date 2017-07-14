@@ -10,6 +10,10 @@ class SessionForm extends React.Component {
     this.demo = this.demo.bind(this);
   }
 
+  componentDidMount() {
+    this.redirectIfLoggedIn()
+  }
+
   componentDidUpdate() {
     this.redirectIfLoggedIn()
   }

@@ -5,7 +5,11 @@ class App extends React.Component {
     super(props);
   }
 
-  componentWillMount() {
+  componentDidMount() {
+    this.ensureLoggedIn()
+  }
+
+  componentDidUpdate() {
     this.ensureLoggedIn()
   }
 
@@ -20,7 +24,9 @@ class App extends React.Component {
     return (
       <div className="app">
         <p>You're logged in!</p>
-        <p>but not really... yet..</p>
+        <button onClick={this.props.logout}>
+          <p>Log out</p>
+        </button>
       </div>
     );
   }

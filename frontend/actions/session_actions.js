@@ -19,7 +19,6 @@ export const login = user => dispatch => (
 
 export const logout = () => dispatch => (
   APIUtil.logout().then(user => dispatch(receiveCurrentUser(null)))
-    .then(() => hashHistory.push("/login"))
 );
 
 export const receiveCurrentUser = currentUser => ({
