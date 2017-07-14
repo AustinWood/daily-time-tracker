@@ -1,1 +1,23 @@
-Deploy to Heroku: https://dashboard.heroku.com/apps/daily-time-tracker/deploy/heroku-git
+#############
+### Now
+
+create account
+log in
+log out
+
+#############
+### Next
+
+seed data
+view all logs for current user
+edit logs for today
+add logs to today
+
+admin login
+
+#############
+### Later
+
+Facebook login
+design
+unit tests
