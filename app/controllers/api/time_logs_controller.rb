@@ -1,6 +1,6 @@
 class Api::TimeLogsController < ApplicationController
   def index
-    @time_logs = TimeLog.all
+    @time_logs = TimeLog.all.where(user_id: current_user.id)
     render json: @time_logs
   end
 
