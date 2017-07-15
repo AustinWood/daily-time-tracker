@@ -1,4 +1,5 @@
 import React from 'react';
+import TimeLogIndexContainer from './time_log/time_log_index_container'
 
 class App extends React.Component {
   constructor(props) {
@@ -27,6 +28,7 @@ class App extends React.Component {
         <button onClick={this.props.logout}>
           <p>Log out</p>
         </button>
+        <TimeLogIndexContainer />
       </div>
     );
   }

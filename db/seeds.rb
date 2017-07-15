@@ -2,8 +2,8 @@ User.destroy_all
 TimeLog.destroy_all
 
 user1 = User.create!(
-  username: "user1",
-  password: "password"
+  username: "user",
+  password: "pass"
 )
 
 timeLog1 = TimeLog.create!(
