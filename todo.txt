@@ -1,8 +1,8 @@
 #############
 ### Now
 
-seed data
-view all logs for current user
+display logs for current user in list
+create more seed data
 
 #############
 ### Next
@@ -11,6 +11,12 @@ edit logs for today
 add logs to today
 
 admin login
+
+#############
+### Fix
+
+short height for scroll
+do I lose currentUser from cookie on refresh?
 
 #############
 ### Later
