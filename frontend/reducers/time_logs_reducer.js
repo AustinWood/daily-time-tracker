@@ -10,8 +10,6 @@ const TimeLogsReducer = (state = {}, action) => {
 
   switch (action.type) {
     case RECEIVE_TIME_LOGS:
-      console.log("from TimeLogsReducer:");
-      console.log(action.timeLogs);
       return action.timeLogs;
     default:
       return state;

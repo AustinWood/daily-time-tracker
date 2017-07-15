@@ -6,7 +6,7 @@ class App extends React.Component {
     super(props);
   }
 
-  componentDidMount() {
+  componentWillMount() {
     this.ensureLoggedIn()
   }
 
