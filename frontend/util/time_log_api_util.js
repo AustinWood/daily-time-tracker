@@ -1,6 +1,6 @@
 export const fetchTimeLogs = () => (
   $.ajax({
     method: 'GET',
-    url: `api/timeLogs`
+    url: `api/time_logs`
   })
 );

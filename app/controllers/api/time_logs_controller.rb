@@ -1,12 +1,12 @@
 class Api::TimeLogsController < ApplicationController
   def index
     @time_logs = TimeLog.all
-    render :index
-    # render json: TimeLog.all.where(user_id: current_user.id)
+    render json: @time_logs
   end
 
   def show
     @time_log = TimeLog.find(params[:id])
+    render json: @time_log
   end
 
   def create
@@ -15,7 +15,6 @@ class Api::TimeLogsController < ApplicationController
   end
 
   def update
-    # debugger
     @time_log = TimeLog.find(params[:id])
     if is_author? && @time_log.update_attributes(time_log_params)
       render json: @time_log

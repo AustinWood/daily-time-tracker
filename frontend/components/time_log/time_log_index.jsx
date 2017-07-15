@@ -7,8 +7,8 @@ class TimeLogIndex extends React.Component {
   }
 
   componentDidMount() {
-    // this.props.requestNotes();
     console.log("time_log_index didMount");
+    this.props.fetchTimeLogs()
   }
 
   userInfo() {

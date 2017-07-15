@@ -120,7 +120,7 @@ class SessionForm extends React.Component {
     return (
       <div className="session-form-container">
         <h1>Daily Time Tracker</h1>
-        <h2>Find out where your time goes by using this awesome app.</h2>
+        <h2>Find out where your time goes with this awesome app.</h2>
         <form onSubmit={this.handleSubmit} className="session-form-box">
           {this.authHeader()}
           <div className="login-form">
