@@ -10,6 +10,10 @@ class TimeLogIndex extends React.Component {
     this.props.fetchTimeLogs()
   }
 
+  componentDidUpdate() {
+    console.log(this.props.timeLogs);
+  }
+
   userInfo() {
     if (this.props.selectedUser === null) {
       return(
