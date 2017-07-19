@@ -68,7 +68,7 @@ class SessionForm extends React.Component {
         <p className="session-form-footer-text">
           {text}&nbsp;&nbsp;{link}
         </p>
-        <br/><br/><br/>
+        <br/><br/>
         <p className="session-form-footer-text">
           Auto login (for demo purposes)<br/>
         <button className="session-form-footer-link" onClick={() => this.demo("user1")}>user1</button><br/>

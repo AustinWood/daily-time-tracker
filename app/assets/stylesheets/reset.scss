@@ -8,7 +8,7 @@ html, body {
 
 html, body, header, nav, h1, a,
 ul, li, strong, main, button, i,
-section, img, div, h2, p, form,
+section, img, div, h2, h3, p, form,
 fieldset, label, input, textarea,
 span, article, footer, time, small {
   margin: 0;
@@ -32,6 +32,7 @@ ul {
 p, h1, h2, h3, h4, span {
   color: #E3F2FC;
   font-weight: 100;
+  margin: 8px 0;
 }
 
 h1 {
@@ -42,6 +43,11 @@ h1 {
 h2 {
   font-weight: 200;
   font-size: 36px;
+}
+
+h3 {
+  font-weight: 200;
+  font-size: 24px;
 }
 
 a {
@@ -68,10 +74,6 @@ input[type="text"],
 input[type="submit"],
 textarea,
 button {
-  /*
-  Get rid of native styling. Read more here:
-  http://css-tricks.com/almanac/properties/a/appearance/
-  */
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;

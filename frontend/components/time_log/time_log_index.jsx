@@ -15,7 +15,17 @@ class TimeLogIndex extends React.Component {
     const timeLogs = this.props.timeLogs
     for (var i = 0; i < timeLogs.length; i++) {
       const timeLog = timeLogs[i]
-      components.push(<div className="timeLogItem" key={timeLog.id}><p>{timeLog.task}</p></div>)
+      const startDate = timeLog.start
+      const stopDate = timeLog.stop
+      const date = startDate.substring(0, 10)
+      const startTime = startDate.substring(11, 19)
+      const stopTime = stopDate.substring(11, 19)
+      components.push(
+        <div className="time-log-item" key={timeLog.id}>
+          <h3>{timeLog.task}</h3>
+          <p>{date}<br/>{startTime} - {stopTime}</p>
+        </div>
+      )
     }
     return components
   }
