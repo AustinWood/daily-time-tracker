@@ -10,8 +10,14 @@ class TimeLogIndex extends React.Component {
     this.props.fetchTimeLogs()
   }
 
-  componentDidUpdate() {
-    console.log(this.props.timeLogs);
+  timeLogComponents() {
+    let components = []
+    const timeLogs = this.props.timeLogs
+    for (var i = 0; i < timeLogs.length; i++) {
+      const timeLog = timeLogs[i]
+      components.push(<div key={timeLog.id}><p>{timeLog.task}</p></div>)
+    }
+    return components
   }
 
   userInfo() {
@@ -23,6 +29,7 @@ class TimeLogIndex extends React.Component {
     return(
       <div className="time-log-index">
         <p>Selected User id: {this.props.selectedUser.id}</p>
+        {this.timeLogComponents()}
       </div>
     );
   }

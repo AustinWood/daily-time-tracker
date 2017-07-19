@@ -2,7 +2,7 @@
 
 ### Now
 
-display logs for current user in list
+fix logout error
 create more seed data
 
 #############

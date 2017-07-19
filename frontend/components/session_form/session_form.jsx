@@ -69,16 +69,16 @@ class SessionForm extends React.Component {
           {text}&nbsp;&nbsp;{link}
         </p>
         <p className="session-form-footer-text">
-          Just want a quick tour of the best features?<br/>
-        <button className="session-form-footer-link" onClick={this.demo}>
-          Try the demo account.
-        </button>
+          Auto login (for demo purposes)<br/>
+        <button className="session-form-footer-link" onClick={() => this.demo("user1")}>user1</button><br/>
+        <button className="session-form-footer-link" onClick={() => this.demo("user2")}>user2</button><br/>
+        <button className="session-form-footer-link" onClick={() => this.demo("admin")}>admin</button>
         </p>
       </div>
     );
   }
 
-  demo() {
+  demo(username) {
     const usernameElement = document.getElementById('username');
     const passwordElement = document.getElementById('password');
     usernameElement.value = '';
@@ -92,13 +92,13 @@ class SessionForm extends React.Component {
         } else if (element === usernameElement) {
           fillInput(passwordElement, 'password')();
         } else {
-          const user = {username: 'demo_account', password: 'password'};
+          const user = {username: username, password: 'password'};
           demoLogin({user});
         }
       };
     };
 
-    fillInput(usernameElement, 'demo_account')();
+    fillInput(usernameElement, username)();
   }
 
   renderErrors() {
@@ -120,7 +120,7 @@ class SessionForm extends React.Component {
     return (
       <div className="session-form-container">
         <h1>Daily Time Tracker</h1>
-        <h2>Find out where your time goes with this awesome app.</h2>
+        <h3>Find out where your time goes with this awesome app.</h3>
         <form onSubmit={this.handleSubmit} className="session-form-box">
           {this.authHeader()}
           <div className="login-form">
