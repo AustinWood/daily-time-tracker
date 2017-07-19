@@ -15,13 +15,10 @@ class App extends React.Component {
   }
 
   componentDidUpdate() {
-    console.log("componentDidUpdate");
     this.ensureLoggedIn()
   }
 
   ensureLoggedIn() {
-    console.log("ensure");
-    console.log(this.props.currentUser);
     const currentUser = this.props.currentUser;
     if (!currentUser) {
       this.props.history.push('/login');
