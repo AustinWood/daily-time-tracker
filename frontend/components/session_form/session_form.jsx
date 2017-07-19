@@ -68,6 +68,7 @@ class SessionForm extends React.Component {
         <p className="session-form-footer-text">
           {text}&nbsp;&nbsp;{link}
         </p>
+        <br/><br/><br/>
         <p className="session-form-footer-text">
           Auto login (for demo purposes)<br/>
         <button className="session-form-footer-link" onClick={() => this.demo("user1")}>user1</button><br/>
@@ -115,29 +116,6 @@ class SessionForm extends React.Component {
       </ul>
     );
   }
-
-  // render() {
-  //   return(
-  //     <div>
-  //     <p>hello1</p>
-  //       <p>hello2</p>
-  //         <p>hello3</p>
-  //           <p>hello4</p>
-  //             <p>hello5</p>
-  //               <p>hello6</p>
-  //                 <p>hello7</p>
-  //                   <p>hello8</p>
-  //                     <p>hello9</p>
-  //                       <p>hello10</p>
-  //                         <p>hello</p>
-  //                           <p>hello</p>
-  //                             <p>hello</p>
-  //                               <p>hello</p>
-  //                                 <p>hello15</p>
-  //     <p>hello9</p>
-  //     </div>
-  //   )
-  // }
 
   render() {
     return (
