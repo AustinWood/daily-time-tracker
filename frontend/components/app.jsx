@@ -49,6 +49,7 @@ class App extends React.Component {
         <p>Date:</p>
         <p>Start time:</p>
         <p>Stop time:</p>
+        <p>Submit</p>
       </div>
     )
   }

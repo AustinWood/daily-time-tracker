@@ -18,6 +18,7 @@ export const login = user => dispatch => (
 
 export const logout = () => dispatch => (
   APIUtil.logout().then(user => dispatch(receiveCurrentUser(null)))
+    .then(() => dispatch(receiveLogoutSuccess()))
 );
 
 export const receiveCurrentUser = currentUser => ({
@@ -29,3 +30,7 @@ export const receiveErrors = errors => ({
   type: RECEIVE_ERRORS,
   errors
 });
+
+export const receiveLogoutSuccess = () => ({
+  type: RECEIVE_LOGOUT_SUCCESS
+})
