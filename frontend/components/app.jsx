@@ -10,7 +10,7 @@ class App extends React.Component {
     this.ensureLoggedIn()
   }
 
-  componentDidUpdate() {
+  componentWillUpdate() {
     this.ensureLoggedIn()
   }
 
@@ -22,12 +22,22 @@ class App extends React.Component {
   };
 
   render() {
+    let name = ""
+    if (this.props.currentUser) {
+      name = this.props.currentUser.username
+    }
     return (
       <div className="app">
-        <p>You're logged in!</p>
-        <button onClick={this.props.logout}>
-          <p>Log out</p>
-        </button>
+        <div id="user-header">
+          <button onClick={this.props.logout}>
+            <p>Add task</p>
+          </button>
+          <h2>{name}</h2>
+          <button onClick={this.props.logout}>
+            <p>Log out</p>
+          </button>
+        </div>
+
         <TimeLogIndexContainer />
       </div>
     );

@@ -2,8 +2,6 @@
 
 ### Now
 
-fix logout error
-create more seed data
 
 #############
 ### Next
@@ -16,7 +14,6 @@ admin login
 #############
 ### Fix
 
-short height for scroll
 do I lose currentUser from cookie on refresh?
 
 #############

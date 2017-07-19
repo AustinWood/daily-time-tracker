@@ -39,21 +39,21 @@ timeLog3 = TimeLog.create!(
 
 timeLog1 = TimeLog.create!(
   user_id: user2.id,
-  task: "Email",
+  task: "Read a book",
   start: DateTime.new(2017,7,14,12,5,6,'-7'),
   stop: DateTime.new(2017,7,14,12,25,56,'-7')
 )
 
 timeLog2 = TimeLog.create!(
   user_id: user2.id,
-  task: "Code",
+  task: "Study",
   start: DateTime.new(2017,7,14,12,32,6,'-7'),
   stop: DateTime.new(2017,7,14,15,2,12,'-7')
 )
 
 timeLog3 = TimeLog.create!(
   user_id: user2.id,
-  task: "Eat dinner",
+  task: "Play video games",
   start: DateTime.new(2017,7,14,18,0,0,'-7'),
   stop: DateTime.new(2017,7,14,18,40,0,'-7')
 )
