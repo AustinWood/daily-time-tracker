@@ -35,7 +35,7 @@ body {
   align-items: baseline;
 }
 
-.time-log-item {
+.time-log-item, .add-task-form {
   background-color: #0A0B1A;
   padding: 12px;
   margin: 24px 0;

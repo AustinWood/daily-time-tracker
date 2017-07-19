@@ -44,7 +44,12 @@ class App extends React.Component {
       return(<div></div>)
     }
     return(
-      <div><p>hello</p></div>
+      <div className="add-task-form">
+        <p>Task name:</p>
+        <p>Date:</p>
+        <p>Start time:</p>
+        <p>Stop time:</p>
+      </div>
     )
   }
 
