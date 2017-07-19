@@ -14,7 +14,14 @@ class App extends React.Component {
     this.ensureLoggedIn()
   }
 
+  componentDidUpdate() {
+    console.log("componentDidUpdate");
+    this.ensureLoggedIn()
+  }
+
   ensureLoggedIn() {
+    console.log("ensure");
+    console.log(this.props.currentUser);
     const currentUser = this.props.currentUser;
     if (!currentUser) {
       this.props.history.push('/login');
@@ -22,10 +29,10 @@ class App extends React.Component {
   };
 
   render() {
-    let name = ""
-    if (this.props.currentUser) {
-      name = this.props.currentUser.username
+    if (this.props.currentUser === null) {
+      return(<div></div>)
     }
+    let name = this.props.currentUser.username
     return (
       <div className="app">
         <div id="user-header">
